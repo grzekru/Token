@@ -30,12 +30,25 @@
 
 --------------------------------------------------------------------------------------------------
 
+#!token=word
+#!ignWhiteChars
+#!ignore=
 
-!sepexc=3.1
-!sepexc=np.
-!sepexc=dr.
-!sepexc=inż.
-!sepexc=itp.
+#!token=sentence
+#!trim
+#!ignWhiteChars
+#!separator
+#!tokenWithSep
+#!sepexc=3.1
+
+!sep=\n|\r
+!ignWhiteChars
+
+#!sepexc=3.1
+#!sepexc=np.
+#!sepexc=dr.
+#!sepexc=inż.
+#!sepexc=itp.
 
 #!token=word
 #!ignWhiteChars
@@ -43,13 +56,13 @@
 #!ignore=-
 
 #!morf
-!output=wyniczek.txt
+#!output=wyniczek.txt
 
-!token=sentence
-!trim
-!ignWhiteChars
-!separator
-!tokenWithSep
+#!token=sentence
+#!trim
+#!ignWhiteChars
+#!separator
+#!tokenWithSep
 
 ---- !token ----
 

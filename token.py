@@ -2,7 +2,7 @@
 
 import codecs
 import re
-import morfeusz
+#import morfeusz
 
 class token(object):
 
@@ -34,7 +34,7 @@ class token(object):
 		if (len(self.sepexc)>0):
 			self.includeExc()
 		self.output()
-		if (self.outText!=" "):
+		if (self.outfile!=None):
 			self.saveToFile()
 
 	def loadText(self):
@@ -148,8 +148,8 @@ class token(object):
 			id = id + 1
 			wynik = "TOKEN " + str(id) + ": " + token
 
-			if (self.morf == True):
-				wynik += " MORF:" + str(morfeusz.analyse(token)[0])
+			#if (self.morf == True):
+				#wynik += " MORF:" + str(morfeusz.analyse(token)[0])
 
 			print(wynik + '\n')
 			self.outText += wynik + '\n'
