@@ -1,0 +1,37 @@
+Tokenizer
+
+Domyślny plik wejściowy - raw.txt
+Domyślne wyjście - Konsola
+Domyślny plik z ustawieniami - settings.txt
+
+------ USTAWIENIA ------
+
+###   !token=word - podział tekstu na słowa
+
+###   !token=sentence - podział tekstu na zdania
+
+###   !separator - uwzględnienie separatorów w liście tokenów
+
+###   !sepexc=XXX - podane wartości nie będą uwzględniane jako separatory (np: inż. w zdaniu)
+
+###   !ignore=XXX - tokeny o treści XXX nie będą branę pod uwagę
+
+###   !ignWhiteChars - tokeny składające się wyłącznie z białych znaków nie będą branę pod uwagę
+
+###   !trim - usunięcie białych znaków znajdujących się na początku i na końcu tokana
+
+###   !tokenWithSep - połącznie separatorów z tokenem, separatory nie tworzą osobnego tokenu, wymagane uzycie opcji: !separator
+
+###   !minLen - minimalna długość tokenu (krótsze tokeny nie uwzględnione)
+
+###   !maxLen - maksymalna długość tokenu (dłuższe tokeny nie uwzględnione)
+
+###   !sep=REGEX - tokeny dzielone według zdefiniowanego wyrażenia regularnego REGEX
+
+###   !morf - wypisanie danych o tokenie z analizatora morfologicznego morfeusz, działa tylko dla pojedynczych słów
+
+###   !input=FILENAME - Zdefiniowanie innego niż domyślny pliku wejściowego
+
+###   !output=FILENAME - zapis danych wyjściowych do pliku zdefiniowanego tekstowego
+
+###   !sep=REGEX - ustalenie własnego

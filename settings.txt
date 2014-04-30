@@ -1,0 +1,88 @@
+###   !token=word - podział tekstu na słowa
+
+###   !token=sentence - podział tekstu na zdania
+
+###   !separator - uwzględnienie separatorów w liście tokenów
+
+###   !sepexc=XXX - podane wartości nie będą uwzględniane jako separatory (np: inż. w zdaniu)
+
+###   !ignore=XXX - tokeny o treści XXX nie będą branę pod uwagę
+
+###   !ignWhiteChars - tokeny składające się wyłącznie z białych znaków nie będą branę pod uwagę
+
+###   !trim - usunięcie białych znaków znajdujących się na początku i na końcu tokana
+
+###   !tokenWithSep - połącznie separatorów z tokenem, separatory nie tworzą osobnego tokenu, wymagane uzycie opcji: !separator
+
+###   !minLen - minimalna długość tokenu (krótsze tokeny nie uwzględnione)
+
+###   !maxLen - maksymalna długość tokenu (dłuższe tokeny nie uwzględnione)
+
+###   !sep=REGEX - tokeny dzielone według zdefiniowanego wyrażenia regularnego REGEX
+
+###   !morf - wypisanie danych o tokenie z analizatora morfologicznego morfeusz, działa tylko dla pojedynczych słów
+
+###   !input=FILENAME - Zdefiniowanie innego niż domyślny pliku wejściowego
+
+###   !output=FILENAME - zapis danych wyjściowych do pliku zdefiniowanego tekstowego
+
+###   !sep=REGEX - ustalenie własnego
+
+--------------------------------------------------------------------------------------------------
+
+
+!sepexc=3.1
+!sepexc=np.
+!sepexc=dr.
+!sepexc=inż.
+!sepexc=itp.
+
+#!token=word
+#!ignWhiteChars
+#!ignore=—
+#!ignore=-
+
+#!morf
+!output=wyniczek.txt
+
+!token=sentence
+!trim
+!ignWhiteChars
+!separator
+!tokenWithSep
+
+---- !token ----
+
+# określa podstawowy sposób podziału tekstu na tokeny, do wyboru podział na słowa i na zdania.
+
+# !token=word - tekst dzielony jest na słowa
+# !token=sentence - tekst dzielony jest na zdania 
+
+---- !separator ----
+
+# uwzględnienie separatorów w liście tokenów
+# !separator
+
+---- !ignore ----
+
+# tokeny o podanej wartości nie będą brane pod uwagę
+
+# !ignore=—
+# !ignore=      ##pusty token
+# !ignore=\n
+
+---- !ignWhiteChars ----
+
+# nie branie pod uwagę tokenów składających się wyłącznie z białych znaków
+
+---- !cut ----
+
+#usuwa białe znaki znajdujące się na początku i na końcu tokena
+
+
+---- !sep ----
+
+#umożliwia sprecyzowanie bardziej bardziej złożonych roguł podziału tekstu, przyjmuje wyrażenia regularne.
+
+# !sep=\n
+# !sep=[^\w\dąęćżźłńóĄĘĆŻŹŁŃÓ—-]
